@@ -1,0 +1,97 @@
+@media only screen and (max-width: 600px) {
+	/* ========== header ========== */
+	.share{
+		width: 26px;
+		bottom: 20px;
+		left: 20px;
+	}
+	.share:hover .tooltiptweet{
+		width: 100px;
+		height: 26px;
+	}
+	img#tweet{
+		width: 15px;
+	}
+	.share span{
+		font-size: 10px;
+	}
+	.fleche{
+		bottom: 6px;
+	}
+	.fleche img{
+		width: 17px;
+	}
+	.menu{
+		top: 20px;
+		left: 20px;
+		width: 200px;
+		font-size: 10px;
+	}
+	.list{
+		top: 20px;
+		right: 20px;
+	}
+	.list .tooltip{
+		width: 5px;
+		height: 5px;
+		margin: 6px;
+		border-radius: 1px;
+	}
+	.list .tooltiptext{
+		right: 35px;
+		font-size: 8px;
+		line-height: 0px;
+		margin-top: 2.45px;
+	}
+
+	/* ========== end-part ========== */
+	#end-part span{
+		height: 3px;
+		margin: 10px 0;
+	}
+	.copy-right{
+		bottom: 7px;
+		left: 20px;
+		font-size: 5px;
+	}
+	.us p{
+		font-size: 8px;
+		line-height: 15px;
+		margin: 10px auto;
+	}
+
+	/* ========== about-us ========== */
+	.us div{
+		margin: 0 15px;
+	}
+
+	/* ========== screen print ========== */
+	#order-container{
+		padding: 0 10px;
+	}
+	.order{
+		width: 50%;
+		font-size: 8px;
+	}
+	.example{
+		width: 50%;
+	}
+	.example img{
+		width: 80%;
+	}
+
+	/* ========== posters ========== */
+	.item1 , .item2 , .item3 , .item4 , .item5 , .item6 , .item7 , .item8 , .item9 , .item10 , .item11 , .item12 , .item13 , .item14 , .item15 , .item16 , .item17 , .item18{
+		margin: 10px auto;
+	}
+	.posters p{
+		font-size: 2.5vw;
+		margin: 3px auto 8px;
+	}
+	.posters span{
+		font-size: 1vw;
+	}
+	.posters hr{
+		margin: -8px auto;
+	}
+}

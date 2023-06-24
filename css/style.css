@@ -1,0 +1,786 @@
+/* ========== general ========== */
+@font-face {
+	font-family: GrandeBold;
+	src: url(../font/LucidaGrandeBold.ttf);
+}
+@font-face {
+	font-family: GrandeSans;
+	src: url(../font/LucidaGrande.ttf);
+}
+@font-face {
+	font-family: roman;
+	src: url(../font/times\ new\ roman\ italic.ttf);
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* border: 1px solid blue; */
+}
+html{
+	scroll-behavior: smooth;
+}
+body , .container{
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+/* ========== loader ========== */
+.loader{
+	width: 100vw;
+	height: 100vh;
+	background-color: #e2e0e0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 200;
+}
+.loader img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+}
+
+/* ========== header ========== */
+.header{
+	height: 100vh;
+	width: 100vw;
+	min-width: 300px;
+	background-color: #fec56d;
+	padding: 40px 25px;
+	font-family: GrandeBold;
+	font-size: 15px;
+	font-weight: bold;
+	position: relative;
+}
+.header #titre{
+	position: absolute;
+	left: 50%;
+	width: 50%;
+	max-width: 700px;
+}
+.share{
+	position: fixed;
+	bottom: 40px;
+	left: 40px;
+	z-index: 1;
+	opacity: 0.5;
+	cursor: pointer;
+	display: flex;
+	width: 40px;
+	transition: 0.5s all;
+}
+.share img{
+	width: 100%;
+}
+.share .tooltiptweet{
+	position: absolute;
+	left: inherit;
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 0 4px 4px 0;
+	display: flex;
+	align-items: center;
+	visibility: hidden;
+	padding: 0 15px;
+	transition: all 0.5s;
+}
+.tooltiptweet div{
+	display: none;
+}
+.share:hover .tooltiptweet div{
+	display: inline-block;
+}
+img#tweet{
+	width: 25px;
+	margin: 5px 5px 0;
+}
+.share:hover .tooltiptweet{
+	visibility: visible;
+	width: 150px;
+	height: 41px;
+}
+.fleche{
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50% , 0);
+	z-index: 1;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.fleche:hover{
+	opacity: 1;
+}
+.menu{
+	position: fixed;
+	top: 40px;
+	left: 40px;
+	z-index: 1;
+	display: inline-block;
+	width: 300px;
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	transition: all 0.5s;
+}
+.menu li a{
+	cursor: pointer;
+	color: #ffffff;
+	opacity: 0.5;
+	text-decoration: none;
+}
+.menu #bold-link{
+	opacity: 1;
+}
+.menu li a:hover{
+	opacity: 1;
+	transition: all 0.5s;
+}
+img#titre{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+}
+.list{
+	position: fixed;
+	top: 40px;
+	right: 40px;
+	z-index: 1;
+}
+.list .tooltip{
+	width: 9px;
+	height: 9px;
+	border-radius: 2.5px;
+	margin: 10px;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: all 0.5s;
+	background-color: #ffffff;
+	text-decoration: none;
+}
+.list #bold-box{
+	opacity: 1;
+}
+.list a{
+	text-decoration: none;
+}
+.list a::after{
+	content: '-';
+	color: transparent;
+	text-decoration: none;
+}
+.list .tooltiptext{
+	visibility: hidden;
+	color: #ffffff;
+	position: fixed;
+	right: 70px;
+	font-size: 13px;
+	line-height: 9px;
+	transition: all 0.1s;
+}
+.list .tooltip:hover .tooltiptext{
+	visibility: visible;
+}
+.list .tooltip:hover{
+	visibility: visible;
+	opacity: 1;
+}
+
+/* ========== part 1-18 ========== */
+#part1 ,#part2 ,#part3 ,#part4 ,#part5 ,#part6 ,#part7 ,#part8 ,#part9 ,#part10 ,#part11, #part12 ,#part13 ,#part14 ,#part15 ,#part16 ,#part17 ,#part18{
+	height: 100vh;
+	width: 100vw;
+	min-width: 300px;
+	position: relative;
+}
+#part1{
+	background-color: #f4d0ad;
+}
+#part2{
+	background-color: #b1deed;
+}
+#part3{
+	background-color: #f79cc1;
+}
+#part4{
+	background-color: #abe7f4;
+}
+#part5{
+	background-color: #f8d5b8;
+}
+#part6{
+	background-color: #a0e3ff;
+}
+#part7{
+	background-color: #f7ca7d;
+}
+#part8{
+	background-color: #fbdff8;
+}
+#part9{
+	background-color: #c6deff;
+}
+#part10{
+	background-color: #91f9d3;
+}
+#part11{
+	background-color: #f8c075;
+}
+#part12{
+	background-color: #ffd4ab;
+}
+#part13{
+	background-color: #b2fad7;
+}
+#part14{
+	background-color: #dbdbdb;
+}
+#part15{
+	background-color: #fddcae;
+}
+#part16{
+	background-color: #fb9d79;
+}
+#part17{
+	background-color: #f6978f;
+}
+#part18{
+	background-color: #000;
+}
+#part18 .trailer{
+	position: fixed;
+	bottom: 40px;
+	right: 30px;
+	text-align: center;
+	visibility: hidden;
+}
+.trailer p{
+	color: #ffffff;
+	font-family: GrandeBold;
+	font-size: 10px;
+	line-height: 16px;
+}
+.trailer #line{
+	width: 40px;
+	height: 1px;
+	background-color: #ffffff;
+	margin: 13px auto;
+}
+.trailer img{
+	width: 35px;
+	animation: trailer 0.5s ease-in-out infinite;
+	animation-direction: alternate;
+}
+@keyframes trailer {
+	0%{ opacity: 0.5;}
+	100%{ opacity: 1;}
+}
+.cycle1{
+	background-image: url(../images/traveler.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle2{
+	background-image: url(../images/weirdo.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle3{
+	background-image: url(../images/velo3.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle4{
+	background-image: url(../images/velo4.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle5{
+	background-image: url(../images/velo5.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle6{
+	background-image: url(../images/velo6.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle7{
+	background-image: url(../images/velo7.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle8{
+	background-image: url(../images/velo8.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle9{
+	background-image: url(../images/velo9.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle10{
+	background-image: url(../images/velo10.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle11{
+	background-image: url(../images/velo11.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle12{
+	background-image: url(../images/velo12.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle13{
+	background-image: url(../images/velo13.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle14{
+	background-image: url(../images/velo14.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle15{
+	background-image: url(../images/velo15.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle16{
+	background-image: url(../images/velo16.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle17{
+	background-image: url(../images/velo17.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+.cycle18{
+	background-image: url(../images/velo18.png);
+	background-position: 50% 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-size: 60vmin;
+}
+#background{
+	width: 65%;
+	min-width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+}
+
+/* ========== end-part ========== */
+#end-part{
+	width: 100vw;
+	height: 100vh;
+	min-width: 300px;
+	background-color: #ed8176;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#end-part a{
+	text-decoration: none;
+	text-align: center;
+	width: 60%;
+	max-width: 400px;
+	min-width: 150px;
+}
+#end-part a:hover{
+	opacity: 0.6;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+#end-part a img{
+	width: 100%;
+}
+#end-part span{
+	width: 30%;
+	min-width: 80px;
+	max-width: 250px;
+	height: 4px;
+	background-color: #ffffff;
+	margin: 20px 0;
+	transition: all 0.5s;
+}
+.copy-right{
+	color: #ffffff;
+	position: fixed;
+	bottom: 15px;
+	left: 40px;
+	font-size: 8px;
+	font-family: GrandeSans;
+	transition: all 0.5s;
+}
+
+/* ========== our teaser ========== */
+#teaser{
+	height: 100vh;
+	width: 100vw;
+	min-width: 300px;
+	background-color: rgb(255, 210, 161);
+	padding: 40px 0;
+	font-size: 15px;
+	text-align: center;
+}
+#teaser #our-teaser{
+	width: 20%;
+	max-width: 210px;
+	min-width: 100px;
+	margin-top: 60px;
+}
+#teaser .list .tooltip{
+	background-color: #000000;
+}
+
+/* ========== about-us ========== */
+#about-us{
+	height: 100vh;
+	width: 100vw;
+	min-width: 300px;
+	background-color: #a3efc9;
+	padding: 40px 0;
+	text-align: center;
+}
+.who-we-are{
+	margin-top: 60px;
+	width: 20%;
+	max-width: 210px;
+	min-width: 100px;
+}
+.us{
+	height: calc(100vh - 160px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.us div{
+	width: 22%;
+	min-width: 115px;
+	max-width: 250px;
+	opacity: 0.7;
+	cursor: pointer;
+	transition: all 0.5s;
+	margin: 0 40px;
+}
+.us div:hover{
+	opacity: 0.9;
+}
+.us .face{
+	width: 100%;
+	padding: 20px 10%;
+}
+.us .job{
+	width: 100%;
+}
+.us a{
+	text-decoration: none;
+	color: #000;
+}
+.us p{
+	font-size: 10px;
+	line-height: 20px;
+	font-family: GrandeSans;
+	margin: 25px auto;
+}
+.social{
+	width: 15%;
+	max-width: 30px;
+	margin: 0 5px;
+	opacity: 0.5;
+}
+
+/* ========== screen print ========== */
+#shop{
+	height: 100vh;
+	width: 100vw;
+	min-width: 300px;
+	background-color: #baf5e9;
+	padding: 40px 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: GrandeBold;
+	font-size: 15px;
+	font-weight: bold;
+}
+#shop .menu li a{
+	color: #000000; 
+}
+#shop .list .tooltip{
+	background-color: #000000;
+}
+#shop .list .tooltiptext{
+	color: #000000;
+}
+#shop .share .tooltiptweet{
+	background-color: rgba(163, 163, 163, 0.5);
+}
+#order-container{
+	width: 90%;
+	min-width: 300px;
+	max-width: 900px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#order-container #print{
+	width: 100%;
+}
+.order{
+	text-align: center;
+	width: 27%;
+	min-width: 150px;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 20px;
+	color: rgb(104, 104, 104);
+}
+.order img{
+	width: 100%;
+	transition: all 0.5s;
+}
+.order img:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+.order p{
+	font-family: GrandeSans;
+	margin: 5px auto;
+}
+.order button{
+	outline: none;
+	border: none;
+	background-color: transparent;
+	margin: 5px auto;
+}
+.order a{
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.5s;
+	color: #db7c6f;
+}
+.order a:hover{
+	text-decoration: underline;
+}
+.example{
+	width: 75%;
+	text-align: right;
+}
+.example img{
+	width: 40%;
+	margin: 0 0 10px 10px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.example img:hover{
+	opacity: 0.7;
+}
+
+/* ========== modal ========== */
+.modal-container{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	font-size: 12px;
+	color: #ffffff;
+	display: none;
+	transition: all 0.5s;
+}
+.modal-box1, .modal-box2, .modal-box3, .modal-box4{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	display: none; 
+	transition: all 0.5s;
+	offset-anchor: center;
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	animation: openModal 0.5s forwards;
+}
+.modal img{
+	width: 100%;
+	border: 1px solid black;
+}
+@keyframes openModal {
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 65%;
+		mix-width: 300px;
+	}
+}
+.modal .detail{
+	display: flex;
+	justify-content: space-between;
+}
+.modal i{
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+/* ========== posters ========== */
+#poster{
+	width: 100vw;
+	min-width: 300px;
+	padding: 40px 0;
+	text-align: center;
+	position: relative;
+}
+#decorate{
+	margin-top: 60px;
+	width: 20%;
+	max-width: 180px;
+	min-width: 80px;
+}
+.posters{
+	margin: 60px auto 0;
+	width: 95%;
+	max-width: 900px;
+}
+.posters1 , .posters2 , .posters3 , .posters4 , .posters5 , .posters6{
+	display: flex;
+	justify-content: center;
+}
+.item1 , .item2 , .item3 , .item4 , .item5 , .item6 , .item7 , .item8 , .item9 , .item10 , .item11 , .item12 , .item13 , .item14 , .item15 , .item16 , .item17 , .item18{
+	width: 32%;
+	max-width: 320px;
+	margin: 20px auto;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.item1:hover , .item2:hover , .item3:hover , .item4:hover , .item5:hover , .item6:hover , .item7:hover , .item8:hover , .item9:hover , .item10:hover , .item11:hover , .item12:hover , .item13:hover , .item14:hover , .item15:hover , .item16:hover , .item17:hover , .item18:hover{
+	opacity: 0.7;
+}
+.posters img{
+	width: 100%;
+}
+.posters p{
+	display: inline-block;
+	font-size: 20px;
+	font-family: roman;
+	margin: 8px auto 20px;
+}
+.posters span{
+	font-size: 10px;
+	font-family: GrandeSans;
+}
+.posters hr{
+	margin: -15px auto;
+	width: 40%;
+}
+#poster .copy-right{
+	color: #000000;
+	position: absolute;
+}
+
